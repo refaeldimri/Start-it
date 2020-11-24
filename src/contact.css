@@ -75,10 +75,10 @@ form label{
   display: flex;
   justify-content:center;
 }
-
+  */
 form select{
     width: 50%;
-    margin: 10px auto;
+     margin: 1px auto;
     display: flex;
     justify-content:center;
     box-shadow: 0 2px 25px rgba(0,0,0,0);
@@ -91,6 +91,6 @@ form select{
 textarea{
     resize: none;
     border-radius: 8px;
+    
 }
 
- */
