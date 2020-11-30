@@ -19,6 +19,17 @@ function App() {
   // getElementById('communities').hover(()->{this.})
   return ( 
   <Router>
+<<<<<<< HEAD
+    <div className="App">
+    <div onMouseLeave={() => setIsShown(false)}> 
+    <nav className="navbar navbar-expand-lg navbar-dark text-white bg-dark">
+  <Link className="navbar-brand text-center" onMouseEnter={() => setIsShown(false)} to="/main">גמני<br/>אנחנו לא לבד</Link>
+
+  <div className="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul className="navbar-nav ml-auto">
+      <li className="nav-item my-auto">
+        <Link className="nav-link" onMouseEnter={() => setIsShown(true)} to="#">קהילות</Link>
+=======
     <div className="App">   
       <header className="container-fluid bg-dark text-white text-right" style={{height:75}}>
         <div class="row">
@@ -62,7 +73,8 @@ function App() {
   <div className="collapse navbar-collapse" id="navbarSupportedContent">
     <ul className="navbar-nav ml-auto">
       <li className="nav-item my-auto">
-        <Link className="nav-link" onMouseEnter={() => setIsShown(true)} to="#">קהילות</Link>
+        <Link className="nav-link" onMouseEnter={() => setIsShown(true)} to="/communities">קהילות</Link>
+>>>>>>> rtl site + new header + communities special menu
       </li>
       <li className="nav-item my-auto" onMouseEnter={() => setIsShown(false)}>
         <Link className="nav-link" to="/Information">מידע שימושי</Link>
