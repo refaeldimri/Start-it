@@ -62,7 +62,7 @@ function App() {
   <div className="collapse navbar-collapse" id="navbarSupportedContent">
     <ul className="navbar-nav ml-auto">
       <li className="nav-item my-auto">
-        <Link className="nav-link" onMouseEnter={() => setIsShown(true)} to="/communities">קהילות</Link>
+        <Link className="nav-link" onMouseEnter={() => setIsShown(true)} to="#">קהילות</Link>
       </li>
       <li className="nav-item my-auto" onMouseEnter={() => setIsShown(false)}>
         <Link className="nav-link" to="/Information">מידע שימושי</Link>
