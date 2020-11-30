@@ -76,6 +76,11 @@ form label{
   justify-content:center;
 }
   */
+.footer-icons:hover{
+  cursor:pointer
+  
+  }
+
 form select{
     width: 50%;
      margin: 1px auto;
