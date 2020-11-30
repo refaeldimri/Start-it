@@ -1,4 +1,7 @@
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Dropdown from "react-bootstrap/Dropdown";
+import DropdownButton from "react-bootstrap/DropdownButton";
+import {useState} from "react";
 import Login from './comps/login';
 import Register from './comps/register';
 import Contact from './comps/contact';
@@ -10,6 +13,10 @@ import Main from './comps/main';
 import { SiFacebook, SiInstagram } from 'react-icons/si';
 
 function App() {
+// onMouseLeave={() => setIsShown(false)}  
+  const [isShown, setIsShown] = useState(false);
+
+  // getElementById('communities').hover(()->{this.})
   return ( 
   <Router>
     <div className="App">   
@@ -47,6 +54,72 @@ function App() {
         
         </div>
       </header>
+    <div className="App">
+    <div onMouseLeave={() => setIsShown(false)}> 
+    <nav className="navbar navbar-expand-lg navbar-dark text-white bg-dark">
+  <Link className="navbar-brand text-center" onMouseEnter={() => setIsShown(false)} to="/main">גמני<br/>אנחנו לא לבד</Link>
+
+  <div className="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul className="navbar-nav ml-auto">
+      <li className="nav-item my-auto">
+        <Link className="nav-link" onMouseEnter={() => setIsShown(true)} to="/communities">קהילות</Link>
+      </li>
+      <li className="nav-item my-auto" onMouseEnter={() => setIsShown(false)}>
+        <Link className="nav-link" to="/Information">מידע שימושי</Link>
+      </li>
+      <li className="nav-item my-auto" onMouseEnter={() => setIsShown(false)}>
+        <Link className="nav-link" to="/Partners">שותפים</Link>
+      </li>
+    </ul>
+    <ul className="navbar-nav mr-auto">
+      <li className="nav-item my-auto">
+        <Link className="nav-link" onMouseEnter={() => setIsShown(false)} to="/">כניסה</Link>
+      </li>
+      <li className="nav-item my-auto">
+        <Link className="nav-link" onMouseEnter={() => setIsShown(false)} to="/Register">הרשמה</Link>
+      </li>
+      <li className="nav-item my-auto">
+        <Link className="nav-link" onMouseEnter={() => setIsShown(false)} to="/Contact">יצירת קשר</Link>
+      </li>
+    </ul>
+  </div>
+  </nav>
+<nav className="navbar navbar-expand-lg navbar-dark text-white bg-dark">
+      <input className="col-3 Dropdown.toggler form-control" onClick={()=> setIsShown(false)} type="search" placeholder="Search" aria-label="Search" />
+      <DropdownButton className="ml-5" id="dropdown-basic-button" onClick={()=> setIsShown(false)} title="מיון לפי מחלה">
+        <Dropdown.Item className="text-right" href="#">מחלון</Dropdown.Item>
+        <Dropdown.Item className="text-right" href="#">כליון</Dropdown.Item>
+        <Dropdown.Item className="text-right" href="#">עוד מחלון</Dropdown.Item>
+      </DropdownButton>
+      <button className="col-1 ml-5 mr-auto mb-3 btn btn-outline-success" onMouseEnter={() => setIsShown(false)}>הוספת סיפור</button>
+ </nav>
+
+          {isShown && (
+<nav className="navbar navbar-expand-lg navbar-dark text-white bg-dark">
+    <ul className="navbar-nav ml-auto">
+      <li className="nav-item my-auto">
+        <Link className="nav-link" to="/Partners">מתמודדי נפש מספרים</Link>
+      </li>
+      <li className="nav-item my-auto">
+        <Link className="nav-link" to="/Partners">הורים מספרים</Link>
+      </li>
+      <li className="nav-item my-auto">
+        <Link className="nav-link" to="/Partners">בני ובנות זוג מספרים</Link>
+      </li>
+      <li className="nav-item my-auto">
+        <Link className="nav-link" to="/Partners">אחים ואחיות מספרים</Link>
+      </li>
+      <li className="nav-item my-auto">
+        <Link className="nav-link" to="/Partners">ילדי מתמודדים מספרים</Link>
+      </li>
+      <li className="nav-item my-auto">
+        <Link className="nav-link" to="/Partners">קרובים וחברים מספרים</Link>
+      </li>
+    </ul>
+</nav>
+
+      )}
+</div>       
       <Switch>
         <Route exact path="/" component = {Login} />
         <Route exact path="/register" component = {Register} />
