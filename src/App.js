@@ -61,7 +61,6 @@ function App() {
       </DropdownButton>
       <button className="col-1 ml-5 mr-auto mb-3 btn btn-outline-success" onMouseEnter={() => setIsShown(false)}>הוספת סיפור</button>
  </nav>
-
           {isShown && (
 <nav className="navbar navbar-expand-lg navbar-dark text-white bg-dark">
     <ul className="navbar-nav ml-auto">
