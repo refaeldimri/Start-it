@@ -11,13 +11,10 @@ import Partners from './comps/partners';
 import Donation from './comps/donation';
 import Main from './comps/main';
 import { SiFacebook, SiInstagram } from 'react-icons/si';
-<<<<<<< HEAD
 
 
 
 
-=======
->>>>>>> footer added
 
 function App() {
 // onMouseLeave={() => setIsShown(false)}  
@@ -26,21 +23,14 @@ function App() {
   // getElementById('communities').hover(()->{this.})
   return ( 
   <Router>
-<<<<<<< HEAD
     <div className="App">
     <div onMouseLeave={() => setIsShown(false)}> 
     <nav className="navbar navbar-expand-lg navbar-dark text-white bg-dark">
   <Link className="navbar-brand text-center" onMouseEnter={() => setIsShown(false)} to="/main">גמני<br/>אנחנו לא לבד</Link>
-
   <div className="collapse navbar-collapse" id="navbarSupportedContent">
     <ul className="navbar-nav ml-auto">
       <li className="nav-item my-auto">
         <Link className="nav-link" onMouseEnter={() => setIsShown(true)} to="#">קהילות</Link>
-=======
-<<<<<<< HEAD
->>>>>>> rtl site + new header + communities special menu
-=======
->>>>>>> footer added, closure before rebase to master
       </li>
       <li className="nav-item my-auto" onMouseEnter={() => setIsShown(false)}>
         <Link className="nav-link" to="/Information">מידע שימושי</Link>
@@ -95,7 +85,6 @@ function App() {
       </li>
     </ul>
 </nav>
-
       )}
 </div>       
       <Switch>
@@ -110,8 +99,6 @@ function App() {
 
       </Switch>
     </div>
-<<<<<<< HEAD
-   
       <footer class="page-footer font-small blue bg-dark">
        <div class="row">
          <div class="footer-menu text-center col-12 text-right text-white">
@@ -128,9 +115,6 @@ function App() {
             <SiFacebook size="1.5em" color="white" px-3 />
           </div>
       </footer>
-
-=======
->>>>>>> footer added
     </Router>
 
     
