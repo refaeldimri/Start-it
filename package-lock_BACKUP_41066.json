@@ -14,7 +14,14 @@
         "react": "^17.0.1",
         "react-bootstrap": "^1.4.0",
         "react-dom": "^17.0.1",
+<<<<<<< HEAD
         "react-icons": "^4.1.0",
+=======
+<<<<<<< HEAD
+        "react-icons": "^4.1.0",
+=======
+>>>>>>> ab3f62093fc1075dad9b7214ee70cc64718de32a
+>>>>>>> 469a794d2179b932cad336f1405a5f36bcc249fe
         "react-router-dom": "^5.2.0",
         "react-scripts": "4.0.0",
         "web-vitals": "^0.2.4"
@@ -15007,6 +15014,10 @@
       "resolved": "https://registry.npmjs.org/react-error-overlay/-/react-error-overlay-6.0.8.tgz",
       "integrity": "sha512-HvPuUQnLp5H7TouGq3kzBeioJmXms1wHy9EGjz2OURWBp4qZO6AfGEcnxts1D/CbwPLRAgTMPCEgYhA3sEM4vw=="
     },
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 469a794d2179b932cad336f1405a5f36bcc249fe
     "node_modules/react-icons": {
       "version": "4.1.0",
       "resolved": "https://registry.npmjs.org/react-icons/-/react-icons-4.1.0.tgz",
@@ -15015,6 +15026,11 @@
         "react": "*"
       }
     },
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> ab3f62093fc1075dad9b7214ee70cc64718de32a
+>>>>>>> 469a794d2179b932cad336f1405a5f36bcc249fe
     "node_modules/react-is": {
       "version": "16.13.1",
       "resolved": "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz",
@@ -32701,8 +32717,16 @@
     "react-icons": {
       "version": "4.1.0",
       "resolved": "https://registry.npmjs.org/react-icons/-/react-icons-4.1.0.tgz",
+<<<<<<< HEAD
       "integrity": "sha512-FCXBg1JbbR0vWALXIxmFAfozHdVIJmmwCD81Jk0EKOt7Ax4AdBNcaRkWhR0NaKy9ugJgoY3fFvo0PHpte55pXg==",
       "requires": {}
+=======
+      "integrity": "sha512-FCXBg1JbbR0vWALXIxmFAfozHdVIJmmwCD81Jk0EKOt7Ax4AdBNcaRkWhR0NaKy9ugJgoY3fFvo0PHpte55pXg=="
+<<<<<<< HEAD
+>>>>>>> footer added
+=======
+>>>>>>> ab3f62093fc1075dad9b7214ee70cc64718de32a
+>>>>>>> 469a794d2179b932cad336f1405a5f36bcc249fe
     },
     "react-is": {
       "version": "16.13.1",
