@@ -8,15 +8,20 @@
       "name": "reactrouter",
       "version": "0.1.0",
       "dependencies": {
-        "@laylazi/bootstrap-rtl": "^4.5.3-1",
         "@testing-library/jest-dom": "^5.11.5",
         "@testing-library/react": "^11.1.2",
         "@testing-library/user-event": "^12.2.2",
-        "bootstrap": "^4.5.3",
         "react": "^17.0.1",
         "react-bootstrap": "^1.4.0",
         "react-dom": "^17.0.1",
+<<<<<<< HEAD
         "react-icons": "^4.1.0",
+=======
+<<<<<<< HEAD
+        "react-icons": "^4.1.0",
+=======
+>>>>>>> ab3f62093fc1075dad9b7214ee70cc64718de32a
+>>>>>>> 469a794d2179b932cad336f1405a5f36bcc249fe
         "react-router-dom": "^5.2.0",
         "react-scripts": "4.0.0",
         "web-vitals": "^0.2.4"
@@ -1971,11 +1976,6 @@
         "node": ">=8"
       }
     },
-    "node_modules/@laylazi/bootstrap-rtl": {
-      "version": "4.5.3-1",
-      "resolved": "https://registry.npmjs.org/@laylazi/bootstrap-rtl/-/bootstrap-rtl-4.5.3-1.tgz",
-      "integrity": "sha512-ka1CqAaS1Go1i2I7dwLxHnaGzUkkHBcLSyFips9t1zuQ56dNb2tZWTjUzjeVc3rLD9Ryb+BNb0yLHfmW5G0znQ=="
-    },
     "node_modules/@nodelib/fs.scandir": {
       "version": "2.1.3",
       "resolved": "https://registry.npmjs.org/@nodelib/fs.scandir/-/fs.scandir-2.1.3.tgz",
@@ -3847,8 +3847,7 @@
     "node_modules/babel-runtime/node_modules/core-js": {
       "version": "2.6.11",
       "resolved": "https://registry.npmjs.org/core-js/-/core-js-2.6.11.tgz",
-      "integrity": "sha512-5wjnpaT/3dV+XB4borEsnAYQchn00XSgTAWKDkEqv+K8KevjbzmofK6hfJ9TZIlpj2N0xQpazy7PiRQiWHqzWg==",
-      "hasInstallScript": true
+      "integrity": "sha512-5wjnpaT/3dV+XB4borEsnAYQchn00XSgTAWKDkEqv+K8KevjbzmofK6hfJ9TZIlpj2N0xQpazy7PiRQiWHqzWg=="
     },
     "node_modules/babel-runtime/node_modules/regenerator-runtime": {
       "version": "0.11.1",
@@ -4064,19 +4063,6 @@
       "version": "1.0.0",
       "resolved": "https://registry.npmjs.org/boolbase/-/boolbase-1.0.0.tgz",
       "integrity": "sha1-aN/1++YMUes3cl6p4+0xDcwed24="
-    },
-    "node_modules/bootstrap": {
-      "version": "4.5.3",
-      "resolved": "https://registry.npmjs.org/bootstrap/-/bootstrap-4.5.3.tgz",
-      "integrity": "sha512-o9ppKQioXGqhw8Z7mah6KdTYpNQY//tipnkxppWhPbiSWdD+1raYsnhwEZjkTHYbGee4cVQ0Rx65EhOY/HNLcQ==",
-      "funding": {
-        "type": "opencollective",
-        "url": "https://opencollective.com/bootstrap"
-      },
-      "peerDependencies": {
-        "jquery": "1.9.1 - 3",
-        "popper.js": "^1.16.1"
-      }
     },
     "node_modules/brace-expansion": {
       "version": "1.1.11",
@@ -4953,8 +4939,7 @@
     "node_modules/core-js": {
       "version": "3.7.0",
       "resolved": "https://registry.npmjs.org/core-js/-/core-js-3.7.0.tgz",
-      "integrity": "sha512-NwS7fI5M5B85EwpWuIwJN4i/fbisQUwLwiSNUWeXlkAZ0sbBjLEvLvFLf1uzAUV66PcEPt4xCGCmOZSxVf3xzA==",
-      "hasInstallScript": true
+      "integrity": "sha512-NwS7fI5M5B85EwpWuIwJN4i/fbisQUwLwiSNUWeXlkAZ0sbBjLEvLvFLf1uzAUV66PcEPt4xCGCmOZSxVf3xzA=="
     },
     "node_modules/core-js-compat": {
       "version": "3.7.0",
@@ -4976,8 +4961,7 @@
     "node_modules/core-js-pure": {
       "version": "3.7.0",
       "resolved": "https://registry.npmjs.org/core-js-pure/-/core-js-pure-3.7.0.tgz",
-      "integrity": "sha512-EZD2ckZysv8MMt4J6HSvS9K2GdtlZtdBncKAmF9lr2n0c9dJUaUN88PSTjvgwCgQPWKTkERXITgS6JJRAnljtg==",
-      "hasInstallScript": true
+      "integrity": "sha512-EZD2ckZysv8MMt4J6HSvS9K2GdtlZtdBncKAmF9lr2n0c9dJUaUN88PSTjvgwCgQPWKTkERXITgS6JJRAnljtg=="
     },
     "node_modules/core-util-is": {
       "version": "1.0.2",
@@ -6037,7 +6021,6 @@
       "version": "2.7.4",
       "resolved": "https://registry.npmjs.org/ejs/-/ejs-2.7.4.tgz",
       "integrity": "sha512-7vmuyh5+kuUyJKePhQfRQBhXV5Ce+RnaeeQArKu1EAMpL3WbgMt5WG6uQZpEVvYSSsxMXRKOewtDk9RaTKXRlA==",
-      "hasInstallScript": true,
       "engines": {
         "node": ">=0.10.0"
       }
@@ -11400,12 +11383,6 @@
         "node": ">=8"
       }
     },
-    "node_modules/jquery": {
-      "version": "3.5.1",
-      "resolved": "https://registry.npmjs.org/jquery/-/jquery-3.5.1.tgz",
-      "integrity": "sha512-XwIBPqcMn57FxfT+Go5pzySnm4KWkT1Tv7gjrpT1srtf8Weynl6R273VJ5GjkRb51IzMp5nbaPjJXMWeju2MKg==",
-      "peer": true
-    },
     "node_modules/js-tokens": {
       "version": "4.0.0",
       "resolved": "https://registry.npmjs.org/js-tokens/-/js-tokens-4.0.0.tgz",
@@ -13300,17 +13277,6 @@
         "node": ">=6"
       }
     },
-    "node_modules/popper.js": {
-      "version": "1.16.1",
-      "resolved": "https://registry.npmjs.org/popper.js/-/popper.js-1.16.1.tgz",
-      "integrity": "sha512-Wb4p1J4zyFTbM+u6WuO4XstYx4Ky9Cewe4DWrel7B0w6VVICvPwdOpotjzcf6eD8TsckVnIMNONQyPIUFOUbCQ==",
-      "deprecated": "You can find the new Popper v2 at @popperjs/core, this package is dedicated to the legacy v1",
-      "peer": true,
-      "funding": {
-        "type": "opencollective",
-        "url": "https://opencollective.com/popperjs"
-      }
-    },
     "node_modules/portfinder": {
       "version": "1.0.28",
       "resolved": "https://registry.npmjs.org/portfinder/-/portfinder-1.0.28.tgz",
@@ -15048,6 +15014,10 @@
       "resolved": "https://registry.npmjs.org/react-error-overlay/-/react-error-overlay-6.0.8.tgz",
       "integrity": "sha512-HvPuUQnLp5H7TouGq3kzBeioJmXms1wHy9EGjz2OURWBp4qZO6AfGEcnxts1D/CbwPLRAgTMPCEgYhA3sEM4vw=="
     },
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 469a794d2179b932cad336f1405a5f36bcc249fe
     "node_modules/react-icons": {
       "version": "4.1.0",
       "resolved": "https://registry.npmjs.org/react-icons/-/react-icons-4.1.0.tgz",
@@ -15056,6 +15026,11 @@
         "react": "*"
       }
     },
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> ab3f62093fc1075dad9b7214ee70cc64718de32a
+>>>>>>> 469a794d2179b932cad336f1405a5f36bcc249fe
     "node_modules/react-is": {
       "version": "16.13.1",
       "resolved": "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz",
@@ -18593,7 +18568,6 @@
       "version": "1.2.13",
       "resolved": "https://registry.npmjs.org/fsevents/-/fsevents-1.2.13.tgz",
       "integrity": "sha512-oWb1Z6mkHIskLzEJ/XWX0srkpkTQ7vaopMQkyaEIoq0fmtFVxOthb8cCxeT+p3ynTdkk/RZwbgG4brR5BeWECw==",
-      "hasInstallScript": true,
       "optional": true,
       "os": [
         "darwin"
@@ -19039,7 +19013,6 @@
       "version": "1.2.13",
       "resolved": "https://registry.npmjs.org/fsevents/-/fsevents-1.2.13.tgz",
       "integrity": "sha512-oWb1Z6mkHIskLzEJ/XWX0srkpkTQ7vaopMQkyaEIoq0fmtFVxOthb8cCxeT+p3ynTdkk/RZwbgG4brR5BeWECw==",
-      "hasInstallScript": true,
       "optional": true,
       "os": [
         "darwin"
@@ -22003,11 +21976,6 @@
         }
       }
     },
-    "@laylazi/bootstrap-rtl": {
-      "version": "4.5.3-1",
-      "resolved": "https://registry.npmjs.org/@laylazi/bootstrap-rtl/-/bootstrap-rtl-4.5.3-1.tgz",
-      "integrity": "sha512-ka1CqAaS1Go1i2I7dwLxHnaGzUkkHBcLSyFips9t1zuQ56dNb2tZWTjUzjeVc3rLD9Ryb+BNb0yLHfmW5G0znQ=="
-    },
     "@nodelib/fs.scandir": {
       "version": "2.1.3",
       "resolved": "https://registry.npmjs.org/@nodelib/fs.scandir/-/fs.scandir-2.1.3.tgz",
@@ -23783,12 +23751,6 @@
       "version": "1.0.0",
       "resolved": "https://registry.npmjs.org/boolbase/-/boolbase-1.0.0.tgz",
       "integrity": "sha1-aN/1++YMUes3cl6p4+0xDcwed24="
-    },
-    "bootstrap": {
-      "version": "4.5.3",
-      "resolved": "https://registry.npmjs.org/bootstrap/-/bootstrap-4.5.3.tgz",
-      "integrity": "sha512-o9ppKQioXGqhw8Z7mah6KdTYpNQY//tipnkxppWhPbiSWdD+1raYsnhwEZjkTHYbGee4cVQ0Rx65EhOY/HNLcQ==",
-      "requires": {}
     },
     "brace-expansion": {
       "version": "1.1.11",
@@ -29751,12 +29713,6 @@
         }
       }
     },
-    "jquery": {
-      "version": "3.5.1",
-      "resolved": "https://registry.npmjs.org/jquery/-/jquery-3.5.1.tgz",
-      "integrity": "sha512-XwIBPqcMn57FxfT+Go5pzySnm4KWkT1Tv7gjrpT1srtf8Weynl6R273VJ5GjkRb51IzMp5nbaPjJXMWeju2MKg==",
-      "peer": true
-    },
     "js-tokens": {
       "version": "4.0.0",
       "resolved": "https://registry.npmjs.org/js-tokens/-/js-tokens-4.0.0.tgz",
@@ -31313,12 +31269,6 @@
         "ts-pnp": "^1.1.6"
       }
     },
-    "popper.js": {
-      "version": "1.16.1",
-      "resolved": "https://registry.npmjs.org/popper.js/-/popper.js-1.16.1.tgz",
-      "integrity": "sha512-Wb4p1J4zyFTbM+u6WuO4XstYx4Ky9Cewe4DWrel7B0w6VVICvPwdOpotjzcf6eD8TsckVnIMNONQyPIUFOUbCQ==",
-      "peer": true
-    },
     "portfinder": {
       "version": "1.0.28",
       "resolved": "https://registry.npmjs.org/portfinder/-/portfinder-1.0.28.tgz",
@@ -32767,8 +32717,16 @@
     "react-icons": {
       "version": "4.1.0",
       "resolved": "https://registry.npmjs.org/react-icons/-/react-icons-4.1.0.tgz",
+<<<<<<< HEAD
       "integrity": "sha512-FCXBg1JbbR0vWALXIxmFAfozHdVIJmmwCD81Jk0EKOt7Ax4AdBNcaRkWhR0NaKy9ugJgoY3fFvo0PHpte55pXg==",
       "requires": {}
+=======
+      "integrity": "sha512-FCXBg1JbbR0vWALXIxmFAfozHdVIJmmwCD81Jk0EKOt7Ax4AdBNcaRkWhR0NaKy9ugJgoY3fFvo0PHpte55pXg=="
+<<<<<<< HEAD
+>>>>>>> footer added
+=======
+>>>>>>> ab3f62093fc1075dad9b7214ee70cc64718de32a
+>>>>>>> 469a794d2179b932cad336f1405a5f36bcc249fe
     },
     "react-is": {
       "version": "16.13.1",
