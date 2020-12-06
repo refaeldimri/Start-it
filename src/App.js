@@ -86,7 +86,7 @@ function App() {
 </nav>
       )}
 </div>       
-      <Switch>
+      <Switch className=" mh-50">
         <Route exact path="/" component = {Login} />
         <Route exact path="/register" component = {Register} />
         <Route exact path="/contact" component = {Contact} />
@@ -97,16 +97,16 @@ function App() {
         <Route exact path="/main" component = {Main} />  
 
       </Switch>
-      <footer class="page-footer font-small blue bg-dark">
-         <div class="footer-menu text-center max-width text-right text-white">
-           <Link to="/" class="p-4 text-white"> אודות</Link> |
-           <Link to="/Information" class="p-4 text-white"> מידע שימושי</Link> | 
-           <Link to="/Donation" class="p-4 text-white"> תרמו לנו</Link> |
-           <Link to="/Partners" class="p-4 text-white"> שותפים</Link>   |
-           <Link to="/Contact" class="p-4 text-white"> צור קשר</Link> 
+      <footer className="page-footer fixed-bottom font-small blue py-4 mt-5 bg-dark">
+         <div className="footer-menu text-center max-width text-right text-white">
+           <Link to="/" className="p-4 text-white"> אודות</Link> |
+           <Link to="/Information" className="p-4 text-white"> מידע שימושי</Link> | 
+           <Link to="/Donation" className="p-4 text-white"> תרמו לנו</Link> |
+           <Link to="/Partners" className="p-4 text-white"> שותפים</Link>   |
+           <Link to="/Contact" className="p-4 text-white"> צור קשר</Link> 
       </div>
 
-      <div class="footer-icons text-dark text-center py-3">
+      <div className="footer-icons text-dark text-center pt-4">
             <SiInstagram size="1.5em" color="white" />--   
             <SiFacebook size="1.5em" color="white" px-3 />
           </div>
