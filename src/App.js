@@ -53,6 +53,30 @@ function App() {
     </ul>
   </div>
   </nav>
+          {isShown && (
+<nav className="navbar navbar-expand-lg navbar-dark text-white bg-dark">
+    <ul className="navbar-nav ml-auto">
+      <li className="nav-item my-auto">
+        <Link className="nav-link" to="/Partners">מתמודדי נפש</Link>
+      </li>
+      <li className="nav-item my-auto">
+        <Link className="nav-link" to="/Partners">הורים</Link>
+      </li>
+      <li className="nav-item my-auto">
+        <Link className="nav-link" to="/Partners">בני ובנות זוג</Link>
+      </li>
+      <li className="nav-item my-auto">
+        <Link className="nav-link" to="/Partners">אחים ואחיות</Link>
+      </li>
+      <li className="nav-item my-auto">
+        <Link className="nav-link" to="/Partners">ילדי מתמודדים</Link>
+      </li>
+      <li className="nav-item my-auto">
+        <Link className="nav-link" to="/Partners">קרובים וחברים</Link>
+      </li>
+    </ul>
+</nav>
+      )}
 <nav className="navbar navbar-expand-lg navbar-dark text-white bg-dark">
       <input className="col-3 Dropdown.toggler form-control" onClick={()=> setIsShown(false)} type="search" placeholder="Search" aria-label="Search" />
       <DropdownButton className="ml-5" id="dropdown-basic-button" onClick={()=> setIsShown(false)} title="מיון לפי מחלה">
@@ -62,30 +86,6 @@ function App() {
       </DropdownButton>
       <button className="col-1 ml-5 mr-auto mb-3 btn btn-outline-success" onMouseEnter={() => setIsShown(false)}>הוספת סיפור</button>
  </nav>
-          {isShown && (
-<nav className="navbar navbar-expand-lg navbar-dark text-white bg-dark">
-    <ul className="navbar-nav ml-auto">
-      <li className="nav-item my-auto">
-        <Link className="nav-link" to="/Partners">מתמודדי נפש מספרים</Link>
-      </li>
-      <li className="nav-item my-auto">
-        <Link className="nav-link" to="/Partners">הורים מספרים</Link>
-      </li>
-      <li className="nav-item my-auto">
-        <Link className="nav-link" to="/Partners">בני ובנות זוג מספרים</Link>
-      </li>
-      <li className="nav-item my-auto">
-        <Link className="nav-link" to="/Partners">אחים ואחיות מספרים</Link>
-      </li>
-      <li className="nav-item my-auto">
-        <Link className="nav-link" to="/Partners">ילדי מתמודדים מספרים</Link>
-      </li>
-      <li className="nav-item my-auto">
-        <Link className="nav-link" to="/Partners">קרובים וחברים מספרים</Link>
-      </li>
-    </ul>
-</nav>
-      )}
 </div>       
       <Switch className=" mh-50">
         <Route exact path="/" component = {Login} />
