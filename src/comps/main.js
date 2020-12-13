@@ -52,24 +52,19 @@ class Main extends Component {
 
                 <div class="row bg-light">
                 <div class="col-2">
-                      <label class="font-italic text-left"><a href="#">לכל הסיפורים</a></label>
+                      <label class="font-italic text-left"><a href="#">לכל הסיפורים</a>
+                      <i class="fab fa-instagram"></i>
+
+
+                      </label>
                     </div>
                 </div>
 
 
             </div>
 
-
-      
-
-
-
         </body>
 
-
-
-       
-   
         </Router>
   )
     }
