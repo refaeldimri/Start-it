@@ -17,7 +17,7 @@ class Partners extends Component {
               </div>
             </div>
 
-            <div className="col-sm-4 ">
+            <div className="col-sm-4">
               <div>
                 <img src={pic2} class="float-right" alt=""></img>
               </div>  
@@ -26,8 +26,10 @@ class Partners extends Component {
 
           <div className="containerCon bg-light">
             <div className="row text-right font-weight-bold font-italic px-2">
-              <div className="col-6">
+              <div className="col-5">
                 <br></br>
+                <br></br> 
+                <br></br> 
              
                 <h2>חושבים שנוכל לעזור לכם?  </h2>
                 <h2> יש לכם רעיון לשיתוף פעולה? כתבו לנו</h2>  
@@ -36,6 +38,8 @@ class Partners extends Component {
 
               <div className="col-6">
               <br></br>
+              <br></br> 
+              <br></br> 
                 <div class="input-group input-group-lg">
                   <div class="input-group-prepend"></div>
                   <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" placeholder="שם מלא"/>
@@ -60,6 +64,9 @@ class Partners extends Component {
             <br></br><br></br>                           
             <button>שלח למערכת</button>
              
+              </div>
+              <div className="col-1">
+
               </div>
             </div>
 
