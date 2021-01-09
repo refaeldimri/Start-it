@@ -8,7 +8,7 @@ class Information extends Component {
     render(){
   return (
     <Router>
-      <br></br>
+      <br/>
         <h1 class="text-danger fs-4 text-center font-weight-bold font-italic px-2">
           יש מקרים שמצריכים סיוע מחוץ למסך
         </h1>

@@ -10,7 +10,7 @@ class Main extends Component {
         <h1 class="text-center text-danger">גמני</h1>
         <br></br>
         <h5 class="text-right font-weight-bold font-italic px-2">
-         .גמני אמא, אבא, בן זוג, בת זוג, אח, אחות, בת, בן, קרוב, קרובה למתמודדת נפש 
+        גמני אמא, אבא, בן זוג, בת זוג, אח, אחות, בת, בן, קרוב, קרובה למתמודדת נפש. 
          </h5>  
          <h5 class="text-right font-weight-bold font-italic px-2">
         גמני הינו אתר המיועד עבורנו – קרובי המשפחה של מתמודדי הנפש,

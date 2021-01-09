@@ -11,7 +11,7 @@ class Login extends Component {
     <div className="container-fluid bg-white" style={{height:25}}></div>
     <div className="container bg-light" style={{height:550}}>
       <div className="row">
-      <div className="col bg-dark" style={{height:550}}></div>
+      
       <div className="col bg-light" style={{height:550}}>          
       <form>
                 <h1 class="text-center text-danger font-weight-bold bg-">התחברי</h1>
@@ -24,6 +24,7 @@ class Login extends Component {
                 <button>התחברי עם פייסבוק</button> 
       </form>
       </div>
+      <div className="col bg-dark" style={{height:550}}></div>
         </div>
         </div>
   </Router>

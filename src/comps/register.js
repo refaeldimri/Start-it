@@ -12,7 +12,7 @@ class Register extends Component {
       <div className="container-fluid bg-white" style={{height:25}}></div>
      <div className="container bg-light" style={{height:700}}>
      <div className="row">
-     <div className="col bg-dark" style={{height:700}}></div>
+     
      <div className="col bg-light" style={{height:700}}>
             <form >
 
@@ -43,6 +43,7 @@ class Register extends Component {
                 <p class="text-center font-italic"><a href="#">התחברי עכשיו</a></p>
             </form>
             </div>
+            <div className="col bg-dark" style={{height:700}}></div>
             </div>
         </div>
 

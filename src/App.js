@@ -10,22 +10,27 @@ import Information from './comps/information';
 import Partners from './comps/partners';
 import Donation from './comps/donation';
 import Main from './comps/main';
+import Parents from './comps/communityComps/parents';
+import Siblings from './comps/communityComps/siblings';
+import Spouses from './comps/communityComps/spouses';
+import MentalChallengers from './comps/communityComps/mentalChallengers';
+import KidsOfChallengers from './comps/communityComps/kidsOfChallengers';
+import Friends from './comps/communityComps/friends';
+import AddStory from './comps/addStory';
 import { SiFacebook, SiInstagram } from 'react-icons/si';
-// import {Nav} from 'react-bootstrap';
-// import './login.css'
-// import Header from './comps/header';
-
+import { render } from "@testing-library/react";
 
 
 function App() {
 // onMouseLeave={() => setIsShown(false)}  
   const [isShown, setIsShown] = useState(false);
+  const [storyComps, setStoryComps] = useState(false);
 
   // getElementById('communities').hover(()->{this.})
   return ( 
   <Router>
     <div className="App">
-    <div onMouseLeave={() => setIsShown(false)}> 
+    <div onMouseLeave={() => setIsShown(false)}>
     <nav className="navbar navbar-expand-lg navbar-dark text-white bg-dark">
   <Link className="navbar-brand text-center" onMouseEnter={() => setIsShown(false)} to="/main">גמני<br/>אנחנו לא לבד</Link>
   <div className="collapse navbar-collapse" id="navbarSupportedContent">
@@ -57,22 +62,22 @@ function App() {
 <nav className="navbar navbar-expand-lg navbar-dark text-white bg-dark">
     <ul className="navbar-nav ml-auto">
       <li className="nav-item my-auto">
-        <Link className="nav-link" to="/Partners">מתמודדי נפש</Link>
+        <Link className="nav-link" to="/MentalChallengers">מתמודדי נפש</Link>
       </li>
       <li className="nav-item my-auto">
-        <Link className="nav-link" to="/Partners">הורים</Link>
+        <Link className="nav-link" to="/Parents">הורים</Link>
       </li>
       <li className="nav-item my-auto">
-        <Link className="nav-link" to="/Partners">בני ובנות זוג</Link>
+        <Link className="nav-link" to="/Spouses">בני ובנות זוג</Link>
       </li>
       <li className="nav-item my-auto">
-        <Link className="nav-link" to="/Partners">אחים ואחיות</Link>
+        <Link className="nav-link" to="/Siblings">אחים ואחיות</Link>
       </li>
       <li className="nav-item my-auto">
-        <Link className="nav-link" to="/Partners">ילדי מתמודדים</Link>
+        <Link className="nav-link" to="/KidsOfChallengers">ילדי מתמודדים</Link>
       </li>
       <li className="nav-item my-auto">
-        <Link className="nav-link" to="/Partners">קרובים וחברים</Link>
+        <Link className="nav-link" to="/AddStory">קרובים וחברים</Link>
       </li>
     </ul>
 </nav>
@@ -80,12 +85,21 @@ function App() {
 <nav className="navbar navbar-expand-lg navbar-dark text-white bg-dark">
       <input className="col-3 Dropdown.toggler form-control" onClick={()=> setIsShown(false)} type="search" placeholder="Search" aria-label="Search" />
       <DropdownButton className="ml-5" id="dropdown-basic-button" onClick={()=> setIsShown(false)} title="מיון לפי מחלה">
-        <Dropdown.Item className="text-right" href="#">מחלון</Dropdown.Item>
-        <Dropdown.Item className="text-right" href="#">כליון</Dropdown.Item>
-        <Dropdown.Item className="text-right" href="#">עוד מחלון</Dropdown.Item>
+        <Dropdown.Item className="text-right" href="#">מתמודדי נפש</Dropdown.Item>
+        <Dropdown.Item className="text-right" href="#">הורים</Dropdown.Item>
+        <Dropdown.Item className="text-right" href="#">בני ובנות זוג</Dropdown.Item>
+        <Dropdown.Item className="text-right" href="#">אחים ואחיות</Dropdown.Item>
+        <Dropdown.Item className="text-right" href="#">ילדי מתמודדים</Dropdown.Item>
+        <Dropdown.Item className="text-right" href="#">קרובים וחברים</Dropdown.Item> 
       </DropdownButton>
-      <button className="col-1 ml-5 mr-auto mb-3 btn btn-outline-success" onMouseEnter={() => setIsShown(false)}>הוספת סיפור</button>
- </nav>
+      
+      <button className="col-1 ml-5 mr-auto mb-3 btn btn-outline-success"
+       onMouseEnter={() => setIsShown(false)}
+      onClick={() => setStoryComps(true)}>
+         הוספת סיפור
+      </button>
+ </nav> 
+ 
 </div>       
       <Switch className=" mh-50">
         <Route exact path="/" component = {Login} />
@@ -96,6 +110,13 @@ function App() {
         <Route exact path="/partners" component = {Partners} />
         <Route exact path="/donation" component = {Donation} />
         <Route exact path="/main" component = {Main} />  
+        <Route exact path="/parents" component = {Parents} /> 
+        <Route exact path="/siblings" component = {Siblings} />
+        <Route exact path="/mentalChallengers" component = {MentalChallengers} /> 
+        <Route exact path="/spouses" component = {Spouses} />
+        <Route exact path="/kidsOfChallengers" component = {KidsOfChallengers} />
+        <Route exact path="/friends" component = {Friends} />
+        <Route exact path="/addStory" component = {AddStory} />
       </Switch>
       <footer className="page-footer bottom font-small blue py-4 mt-5 bg-dark">
          <div className="footer-menu text-center max-width text-right text-white">

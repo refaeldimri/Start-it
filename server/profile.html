@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>profile html page</h1>
+    <h1 id="myemail">email</h1>
+    <h1 id="nickname"></h1>
+    <h1 id="dob"></h1>
+    <img src="" alt="" id="profileimage">
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+<script>
+    window.onload = (event)=>{
+        return;
+        $.post('/loadProfile', {string: "string"},(data)=>{
+            alert(data.image)
+            $("#myemail").text(data.email)
+            $("#nickname").text(data.nickname)
+            $("#dob").text(data.dob)
+            $("#profileimage").attr('src', data.image)
+        })
+    }
+</script>
+</html>

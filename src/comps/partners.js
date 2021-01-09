@@ -27,12 +27,18 @@ class Partners extends Component {
           <div className="containerCon bg-light">
             <div className="row text-right font-weight-bold font-italic px-2">
               <div className="col-5">
-                <br></br>
-                <br></br> 
-                <br></br> 
+                <br />
+                <br /> 
+                <br /> 
+                <br /> 
+                <br /> 
+                <br />
+                <br /> 
              
-                <h2>חושבים שנוכל לעזור לכם?  </h2>
-                <h2> יש לכם רעיון לשיתוף פעולה? כתבו לנו</h2>  
+                <h2 className="text-center">
+                חושבים שנוכל לעזור לכם? <br />
+                 יש לכם רעיון לשיתוף פעולה? <br />
+                 כתבו לנו</h2>  
                 <br></br> 
                 </div>
 
@@ -60,7 +66,7 @@ class Partners extends Component {
                 <br></br><br></br>
 
                 
-            <textarea type="text" rows="10" cols="84" placeholder="כיצד נוכל לעזור לכם?"></textarea>     
+            <div class="form-group"> <textarea class="form-control" placeholder="כיצד נוכל לעזור לכם?" id="exampleFormControlTextarea1" rows="3"></textarea> </div> 
             <br></br><br></br>                           
             <button>שלח למערכת</button>
              

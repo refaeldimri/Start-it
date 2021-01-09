@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>admin page</h1>
+
+
+    <form action="/userRoutes/signup" method="POST" enctype="multipart/form-data">
+        <input type="email" name="email" id="email" placeholder="אימייל">
+        <input type="text" name="nickname" id="nickname" placeholder="כינוי">
+        <input type="date" name="dateofbirth" id="dateofbirth" placeholder="תאריך לידה">
+        <input type="file" name="file" id="file">
+        <input type="password" name="password" id="password">
+        <button type="submit" id="signup">הירשם\י</button>
+    </form>
+    <input type="email" name="loginEmail" id="loginEmail">
+    <input type="password" name="loginPassword" id="loginPassword">
+    <button onclick="login()">Login</button>
+    <button id="logout" onclick="logout()">Logout</button>
+
+    <h1 id="emailh1"></h1>
+    <h1 id="nicknameh1"></h1>
+    <h1 id="dobh1"></h1>
+    <img width="300" height="200" id="profileimg" src="" alt="">
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+<script>
+    window.onload = function() {
+        $.post("/userRoutes/loadprofile", {}, (data)=>{
+            if(data) {
+                $("#emailh1").text(data.email)
+                $("#nicknameh1").text(data.nicknameh1)
+                $("#dobh1").text(data.dob)
+                $("#profileimg").attr('src', data.image)
+            }
+        })
+    }
+    function login(){
+        let email = $("#loginEmail").val();
+        let password = $("#loginPassword").val();
+        $.post("/userRoutes/login", {email, password}, (data )=>{
+            if(data.email == email)
+            {
+                console.log(data.email)
+                $("#emailh1").text(data.email)
+                $("#nicknameh1").text(data.nicknameh1)
+                $("#dobh1").text(data.dob)
+                $("#profileimg").attr('src', data.image)
+            }
+            
+
+        })
+}
+    function logout(){
+        $.post('/userRoutes/logout', {}, (data)=>{
+            if(data.isLoggedOut) {
+                $("#emailh1").text('')
+                $("#nicknameh1").text('')
+                $("#dobh1").text('')
+                $("#profileimg").attr('src', '')
+            }
+            console.log(data);
+        })
+    }
+</script>
+</html>
