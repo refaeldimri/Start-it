@@ -19,16 +19,16 @@ class Information extends Component {
         <div className="row">
             <div className="col-sm-4 ">
               <div>
-              <a href="https://www.eran.org.il/">
-                 <img src={pic3} class="float-right px-5" alt=""></img> 
+              <a href="https://www.eran.org.il/" target="_blank">
+                 <img src={pic3} class="float-right px-5" alt="" ></img> 
                  </a>     
               </div>
             </div>
 
             <div className="col-sm-4">
               <div>
-              <a href="https://www.milam.org.il/">
-                 <img src={pic4} class="float-right py-3" alt=""></img>
+              <a href="https://www.milam.org.il/" target="_blank">
+                 <img src={pic4} class="float-right py-3" alt="" ></img>
               </a>
               </div>  
             </div>

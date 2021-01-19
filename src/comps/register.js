@@ -14,14 +14,15 @@ class Register extends Component {
      <div className="row">
      
      <div className="col bg-light" style={{height:700}}>
-            <form >
+     <form action="http://localhost:3001/userRoutes/signup" method="POST" enctype="multipart/form-data">
 
                 <h1 class="text-center text-danger font-weight-bold bg-">הירשמי</h1>
                 <div class="input-group input-group-sm mb-2">
-                <input type="text" placeholder="Nick name"/>
-                <input type="email" placeholder="Email"/>
-                <input type="password" placeholder="Password"/>
-                <input type="date" placeholder="Date of birth" />
+                <input type="email" name="email" id="email" placeholder="אימייל" />
+                <input type="text" name="nickname" id="nickname" placeholder="כינוי" />
+                <input type="date" name="dateofbirth" id="dateofbirth" placeholder="תאריך לידה" />
+                <input type="file" name="file" id="file" />
+                <input type="password" name="password" id="password" />
                 <input type="checkbox"/>
                 </div>
 
@@ -36,7 +37,7 @@ class Register extends Component {
                   <p>קראתי את
                   <a href ="#"> התקנון ומדיניות הפרטיות והשימוש במידע  </a>
                   ואני מסכימה להם </p>   
-                  <button>הירשמי לאתר</button> 
+                  <button type="submit" id="signup">הירשם\י</button>
                   <label class="font-weight-bold">או</label>  
                 <button>התחברי עם פייסבוק</button> 
                 <p class="text-center font-italic">?כבר יש לך חשבון</p>

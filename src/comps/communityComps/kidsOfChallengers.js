@@ -10,6 +10,12 @@ class KidsOfChallengers  extends Component {
   };
 
   componentDidMount(){
+      axios.post('http://localhost:3001/test', {someString:"ignore this string"}).then((res) =>{
+        alert(JSON.stringify(res.data))
+        console.log(res.data)}
+        ).catch((error) =>{console.log(error)})
+    
+
     axios.get('https://jsonplaceholder.typicode.com/users').then(res =>{
       this.setState({stories: res.data});
     });

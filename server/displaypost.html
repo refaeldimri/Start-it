@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" name="postid" id="postid" placeholder="postid">
+    <button id="getpost" onclick="getPost()">Get Post</button>
+    <h2 id="nickname"></h2> 
+    <img src="" id="userimage" alt="">
+    <h1 id="title"></h1>
+    <h3 id="content"></h3>
+    <img src="" id="postimage" alt=""><br>
+    <div id="comments"></div>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+    <script>
+        function getPost(){
+            let postid = $("#postid").val()
+            $.post('http://localhost:3001/postRoutes/getPost', {postid}, (data)=>{
+                $("#content").text(JSON.stringify(data))
+                if(data.post[0].id > 0){
+                    let commentElements = `<input type="text" name="commentContent" id="commentContent"> <button id="addComment" onclick="addComment()">הוסף תגובה</button><h3 id="allComments"></h3>`
+                    $("#comments").append(commentElements)
+                }
+            })
+        }
+        function addComment(){
+            let postid = $("#postid").val()
+            alert(postid)
+            let commentContent = $("#commentContent").val()
+            $.post('http://localhost:3001/postRoutes/addComment', {postid, commentContent}, (data)=>{
+                $("allComments").text(data.comments)
+            })
+        }
+    </script>
+</html>

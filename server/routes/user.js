@@ -20,6 +20,20 @@ const storageProfileImage = multer.diskStorage({
 const uploadProfileImage = multer({
     storage: storageProfileImage
 })
+const storagePostImage = multer.diskStorage({
+    destination: function (req, file, cb) {
+        cb(null, rootPath + '/uploads/posts')
+    },
+    filename: function (req, file, cb) {
+        let time = new Date();
+        let fileString = time.getFullYear() + time.getMonth() + time.getDate() + time.getHours() + req.body.title + req.session.nickname;
+        cb(null,  + fileString + ".png")
+    }
+})
+const uploadPostImage = multer({
+    storage: storagePostImage
+})
+
 const router = express.Router();
 router.use(session({
     secret: 'MentalHealthQnA',
@@ -30,17 +44,27 @@ router.use(session({
         sameSite: 'strict', // THIS is the config you are looing for.
     }, store: new MySQLStore(options)}));
 router.post('/admin', (req, res)=>{res.sendFile(__dirname + '/admin.html')})
+
+
 router.post('/loadProfile', (req, res) => {
     if (req.session.id) {
-        console.log(req.session.id)
-        db.query('SELECT * FROM user WHERE session_id = ?', [req.session.id], (err, result, fields) => {
-            if (result.length > 0)
+        db.query('SELECT * FROM sessions WHERE sid = ?', [req.session.id], (err, result, fields) => {
+            if (result.length > 0){
+                let session = JSON.parse(result[0].session)
+                req.session.email = session.email;
+                req.session.nickname = session.nickname
+                req.session.dob = session.dob
+                req.session.userid = session.userid,
+                req.session.image = session.image
+                console.log("loadprofile")
                 res.json({
-                    email: result[0].email,
-                    nickname: result[0].nickname,
-                    image: result[0].image,
-                    dob: result[0].date_of_birth
+                    email: session.email,
+                    nicknameh1: session.nickname,
+                    image: session.image,
+                    dob: session.date_of_birth
                 });
+                //console.log(result[0])
+            }
             else res.json({})
         })
     }
@@ -48,24 +72,26 @@ router.post('/loadProfile', (req, res) => {
 
 router.post('/login', (req, res) => {
     if (req.body.email.length > 0 && req.body.password.length > 0) {
-        db.query("SELECT * FROM user WHERE email = ? AND password = ?", [req.body.email, req.body.password], (err, result, fields) => {
-            console.log(result)
+        db.query("SELECT * FROM users WHERE email = ? AND password = ?", [req.body.email, req.body.password], (err, result, fields) => {
             if (result.length === 0) res.send({error:"login failed"})
             else {
                 req.session.email = result[0].email;
                 req.session.nickname = result[0].nickname
                 req.session.dob = result[0].date_of_birth
-                db.query("UPDATE user SET session_id = ? WHERE email = ?", [req.session.id, result[0].email], (err, result, fields) => {
-                    console.log(result)
-                    if (result.length === 0) res.send({})
+                req.session.userid = result[0].userid
+                req.session.image = result[0].image_file_name
+                db.query("UPDATE users SET session_id = ? WHERE email = ?", [req.session.id, result[0].email], (err, result, fields) => {
+                    if (result.affectedRows < 1) res.send({result: "failed login"})
                     else {
-                        //res.redirect('/admin')
-                        res.send({
-                            email: req.session.email,
-                            nickname: req.session.nickname,
-                            dob: req.session.dob,
-                            image: req.session.nickname + "Profile.png"
-                        })
+                        console.log("success " + result.affectedRows + JSON.stringify(result))
+                        //res.redirect('http://localhost:3000/MentalChallengers')
+                        res.json({result: "successful login"})
+                        // res.send({
+                        //     email: req.session.email,
+                        //     nickname: req.session.nickname,
+                        //     dob: req.session.dob,
+                        //     image: req.session.nickname + "Profile.png"
+                        // })
                     }
         
                 })
@@ -83,12 +109,15 @@ router.post('/logout', (req, res) => {
             req.session.email = ''
             req.session.nickname = ''
             req.session.dob = ''
+            req.session.image = ''
+            req.session.userid = ''
         }
         res.json({isLoggedOut: true})
     })
 })
 router.post('/signup', uploadProfileImage.single('file'), (req, res, next) => {
-    db.query("INSERT INTO user VALUES(?, ?, ?, ?, ?, ?)",
+    console.log(req.body)
+    db.query("INSERT INTO users(email, nickname, date_of_birth, image_file_name, password, session_id) VALUES(?, ?, ?, ?, ?, ?)",
         [req.body.email, req.body.nickname, req.body.dateofbirth, req.file ? req.body.nickname + "Profile.png" : "", req.body.password, req.session.id],
         (err, results, fields) => {
             if (results)

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="http://localhost:3001/postRoutes/addPost" method="post">
+    <input type="text" name="title" id="title" placeholder="title"><br>
+    <textarea name="content" id="content" cols="30" rows="10" placeholder="content">
+    </textarea>
+    <input type="file" name="file" id="file"><br>
+    <select name="category" id="category">
+        <option value="children">ילדים</option>
+        <option value="survivors">מתמודדים</option>
+        <option value="parents">הורים</option>
+        <option value="brotherssisters">אחים ואחיות</option>
+        <option value="friends">קרובים וחברים</option>
+      </select>
+    <button type="submit">פרסם פוסט</button>
+</form>
+
+<h1 id="emailh1"></h1>
+<h1 id="nicknameh1"></h1>
+<h1 id="dobh1"></h1>
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+<script>
+        window.onload = function() {
+        $.post("http://localhost:3001/userRoutes/loadprofile", {}, (data)=>{
+            if(data) {
+                $("#emailh1").text(data.email)
+                $("#nicknameh1").text(data.nicknameh1)
+                $("#dobh1").text(data.dob)
+                $("#profileimg").attr('src', data.image)
+                alert(JSON.stringify(data))
+            }
+        })
+    }
+</script>
+</html>

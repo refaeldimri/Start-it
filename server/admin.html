@@ -9,7 +9,7 @@
     <h1>admin page</h1>
 
 
-    <form action="/userRoutes/signup" method="POST" enctype="multipart/form-data">
+    <form action="http://localhost:3001/userRoutes/signup" method="POST" enctype="multipart/form-data">
         <input type="email" name="email" id="email" placeholder="אימייל">
         <input type="text" name="nickname" id="nickname" placeholder="כינוי">
         <input type="date" name="dateofbirth" id="dateofbirth" placeholder="תאריך לידה">
@@ -26,12 +26,32 @@
     <h1 id="nicknameh1"></h1>
     <h1 id="dobh1"></h1>
     <img width="300" height="200" id="profileimg" src="" alt="">
+    <br>
+    <form action="http://localhost:3001/postRoutes/addpost" method="POST" enctype="multipart/form-data">
+        <input type="text" name="title" id="title">
+        <textarea name="content" id="content" cols="30" rows="10"></textarea>
+        <input type="file" name="file" id="postfile">
+        <select name="category" id="category">
+            <option value="children">ילדים</option>
+            <option value="survivors">מתמודדים</option>
+            <option value="parents">הורים</option>
+            <option value="brotherssisters">אחים ואחיות</option>
+            <option value="friends">קרובים וחברים</option>
+          </select>
+        <button type="submit" id="addpost">הירשם\י</button>
+    </form>
+    <button onclick="displaySurvivors()">Survivors</button>
 </body>
 <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
     crossorigin="anonymous"></script>
 <script>
+    function displaySurvivors(){
+        $.post('http://localhost:3001/postRoutes/getPosts', {category: 'survivors'}, (data)=>{
+            alert(JSON.stringify(data))
+        })
+    }
     window.onload = function() {
-        $.post("/userRoutes/loadprofile", {}, (data)=>{
+        $.post("http://localhost:3001/userRoutes/loadprofile", {}, (data)=>{
             if(data) {
                 $("#emailh1").text(data.email)
                 $("#nicknameh1").text(data.nicknameh1)
@@ -44,8 +64,9 @@
         let email = $("#loginEmail").val();
         let password = $("#loginPassword").val();
         $.post("/userRoutes/login", {email, password}, (data )=>{
-            if(data.email == email)
+            if(data.result == "successful login")
             {
+                window.location = "http://localhost:3001/addpost"
                 console.log(data.email)
                 $("#emailh1").text(data.email)
                 $("#nicknameh1").text(data.nicknameh1)

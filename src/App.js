@@ -24,9 +24,7 @@ import { render } from "@testing-library/react";
 function App() {
 // onMouseLeave={() => setIsShown(false)}  
   const [isShown, setIsShown] = useState(false);
-  const [storyComps, setStoryComps] = useState(false);
-
-  // getElementById('communities').hover(()->{this.})
+ 
   return ( 
   <Router>
     <div className="App">
@@ -46,7 +44,8 @@ function App() {
       </li>
     </ul>
     <ul className="navbar-nav mr-auto">
-      <li className="nav-item my-auto">
+      
+      <li className="nav-item my-auto">   
         <Link className="nav-link" onMouseEnter={() => setIsShown(false)} to="/">כניסה</Link>
       </li>
       <li className="nav-item my-auto">
@@ -77,7 +76,7 @@ function App() {
         <Link className="nav-link" to="/KidsOfChallengers">ילדי מתמודדים</Link>
       </li>
       <li className="nav-item my-auto">
-        <Link className="nav-link" to="/AddStory">קרובים וחברים</Link>
+        <Link className="nav-link" to="/Friends">קרובים וחברים</Link>
       </li>
     </ul>
 </nav>
@@ -92,12 +91,14 @@ function App() {
         <Dropdown.Item className="text-right" href="#">ילדי מתמודדים</Dropdown.Item>
         <Dropdown.Item className="text-right" href="#">קרובים וחברים</Dropdown.Item> 
       </DropdownButton>
+
       
       <button className="col-1 ml-5 mr-auto mb-3 btn btn-outline-success"
-       onMouseEnter={() => setIsShown(false)}
-      onClick={() => setStoryComps(true)}>
+       onMouseEnter={() => setIsShown(false)}><Link to="/AddStory">
          הוספת סיפור
+         </Link>
       </button>
+      
  </nav> 
  
 </div>       
